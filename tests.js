@@ -6,4 +6,7 @@ describe('helloWorld', function() {
     it('should return a string', function() {
         expect(typeof helloWorld()).toBe('string');
     });
+    it('should return "Hello, World!" when called', function() {
+        expect(helloWorld()).toBe('Hello, World!');
+    });
 });
