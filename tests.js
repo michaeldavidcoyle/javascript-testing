@@ -22,5 +22,8 @@ describe('stringCharAt', function() {
         expect(stringCharAt('abc', 'abc')).toBe(undefined);
         expect(stringCharAt('abc', 3.14)).toBe(undefined);
         expect(stringCharAt('abc', false)).toBe(undefined);
+        expect(stringCharAt(true, 1)).toBe(undefined);
+        expect(stringCharAt(99, 42)).toBe(undefined);
+        expect(stringCharAt(['abc', 2])).toBe(undefined);
     });
 });
