@@ -13,6 +13,6 @@ describe('helloWorld', function() {
 
 describe('stringCharAt', function() {
     it('should be a defined function', function() {
-        expect(typeof strCharAt).toBe('function');
+        expect(typeof stringCharAt).toBe('function');
     });
 });
