@@ -26,4 +26,13 @@ describe('stringCharAt', function() {
         expect(stringCharAt(99, 42)).toBe(undefined);
         expect(stringCharAt(['abc', 2])).toBe(undefined);
     });
+    it('should return the appropriate character when passsed a string and a position', function() {
+        var str = 'testing: 1, 2, 3';
+        expect(stringCharAt(str, 0)).toBe(str.charAt(0));
+        expect(stringCharAt(str, 1)).toBe(str.charAt(1));
+        expect(stringCharAt(str, 4)).toBe(str.charAt(4));
+        expect(stringCharAt(str, 7)).toBe(str.charAt(7));
+        expect(stringCharAt(str, 10)).toBe(str.charAt(10));
+        expect(stringCharAt(str, 12)).toBe(str.charAt(12));
+    });
 });

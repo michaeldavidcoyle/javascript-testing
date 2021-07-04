@@ -7,5 +7,5 @@ function helloWorld() {
 function stringCharAt(string, position) {
     if (typeof string !== 'string') return undefined;
     if (!Number.isInteger(position)) return undefined;
-    return '';
+    return string[position];
 }
