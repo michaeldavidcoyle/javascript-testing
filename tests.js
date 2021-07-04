@@ -15,7 +15,7 @@ describe('stringCharAt', function() {
     it('should be a defined function', function() {
         expect(typeof stringCharAt).toBe('function');
     });
-    it('should return a string', function() {
-        expect(typeof stringCharAt()).toBe('string');
+    it('should return a string when passed a string and a position', function() {
+        expect(typeof stringCharAt('abc', 0)).toBe('string');
     });
 });
