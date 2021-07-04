@@ -18,4 +18,9 @@ describe('stringCharAt', function() {
     it('should return a string when passed a string and a position', function() {
         expect(typeof stringCharAt('abc', 0)).toBe('string');
     });
+    it ('should return undefined when passed an argument of an incorrect type', function() {
+        expect(stringCharAt('abc', 'abc')).toBe(undefined);
+        expect(stringCharAt('abc', 3.14)).toBe(undefined);
+        expect(stringCharAt('abc', false)).toBe(undefined);
+    });
 });
