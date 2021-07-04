@@ -35,4 +35,10 @@ describe('stringCharAt', function() {
         expect(stringCharAt(str, 10)).toBe(str.charAt(10));
         expect(stringCharAt(str, 12)).toBe(str.charAt(12));
     });
+    it('should return an empty string when passed a position < 0 or > string.length', function() {
+        var str = '0123456789';
+        expect(stringCharAt(str, -1)).toBe(str.charAt(-1));
+        expect(stringCharAt(str, 10)).toBe(str.charAt(10));
+        expect(stringCharAt(str, 100)).toBe(str.charAt(100));
+    });
 });
