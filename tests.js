@@ -10,3 +10,9 @@ describe('helloWorld', function() {
         expect(helloWorld()).toBe('Hello, World!');
     });
 });
+
+describe('stringCharAt', function() {
+    it('should be a defined function', function() {
+        expect(typeof strCharAt).toBe('function');
+    });
+});
