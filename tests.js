@@ -59,6 +59,6 @@ describe('stringIndexOf', function() {
         var string = 'abcdefghijklmnopqrstuvwxyz';
         var randomChar = string[Math.floor(Math.random() * string.length)];
 
-        expect(stringIndexOf(randomChar)).toBe(string.indexOf(randomChar));
+        expect(stringIndexOf(string, randomChar)).toBe(string.indexOf(randomChar));
     });
 });
