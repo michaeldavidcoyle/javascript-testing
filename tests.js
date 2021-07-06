@@ -42,3 +42,9 @@ describe('stringCharAt', function() {
         expect(stringCharAt(str, 100)).toBe(str.charAt(100));
     });
 });
+
+describe('stringIndexOf', function() {
+    it('should be a defined function', function() {
+        expect(typeof stringIndexOf).toBe('function');
+    });
+});
