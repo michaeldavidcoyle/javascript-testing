@@ -55,4 +55,10 @@ describe('stringIndexOf', function() {
         expect(Number.isInteger(stringIndexOf(false))).toBe(true);
         expect(Number.isInteger(stringIndexOf(NaN))).toBe(true);
     });
+    it('should return the index of a passed single character', function() {
+        var string = 'abcdefghijklmnopqrstuvwxyz';
+        var randomChar = string[Math.floor(Math.random() * string.length)];
+
+        expect(stringIndexOf(randomChar)).toBe(string.indexOf(randomChar));
+    });
 });
