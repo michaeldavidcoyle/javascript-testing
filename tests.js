@@ -80,3 +80,9 @@ describe('stringIndexOf', function() {
         expect(stringIndexOf(string, '', 100)).toBe(string.indexOf('', 100));
     });
 });
+
+describe('stringLength', function() {
+    it('should be a defined function', function() {
+        expect(typeof stringLength).toBe('function');
+    });
+});
