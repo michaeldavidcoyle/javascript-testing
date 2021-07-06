@@ -74,4 +74,9 @@ describe('stringIndexOf', function() {
     it('should find the starting index of searchString of variable length', function() {
         expect(stringIndexOf(string, searchString)).toBe(string.indexOf(searchString));
     });
+    it('should return the passed position (or 0) when passed an empty string or string.length when the position is greater', function() {
+        expect(stringIndexOf(string, '')).toBe(string.indexOf(''));
+        expect(stringIndexOf(string, '', randomPosition)).toBe(string.indexOf('', randomPosition));
+        expect(stringIndexOf(string, '', 100)).toBe(string.indexOf('', 100));
+    });
 });
