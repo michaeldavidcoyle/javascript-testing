@@ -83,6 +83,7 @@ describe('stringIndexOf', function() {
 
 describe('stringLength', function() {
     var strings = [
+        '',
         ' ',
         'abc',
         'qwerty',
