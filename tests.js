@@ -47,4 +47,12 @@ describe('stringIndexOf', function() {
     it('should be a defined function', function() {
         expect(typeof stringIndexOf).toBe('function');
     });
+    it('should always return an integer when called', function() {
+        expect(Number.isInteger(stringIndexOf())).toBe(true);
+        expect(Number.isInteger(stringIndexOf(null))).toBe(true);
+        expect(Number.isInteger(stringIndexOf('e'))).toBe(true);
+        expect(Number.isInteger(stringIndexOf(2))).toBe(true);
+        expect(Number.isInteger(stringIndexOf(false))).toBe(true);
+        expect(Number.isInteger(stringIndexOf(NaN))).toBe(true);
+    });
 });
