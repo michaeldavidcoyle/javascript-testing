@@ -17,3 +17,4 @@ function stringCharAt(string, position) {
 }
 
 // Create a function that reproduces the output of String.prototype.indexOf
+function stringIndexOf() {}
