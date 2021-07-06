@@ -47,6 +47,9 @@ describe('stringIndexOf', function() {
     var string = 'abcdefghijklmnopqrstuvwxyz';
     var randomChar = string[Math.floor(Math.random() * string.length)];
     var randomPosition = Math.floor(Math.random() * 23);
+    var start = Math.floor(Math.random() * 10);
+    var end = start + Math.floor(Math.random() * 10 + 2);
+    var searchString = string.slice(start, end);
 
     it('should be a defined function', function() {
         expect(typeof stringIndexOf).toBe('function');
@@ -67,5 +70,8 @@ describe('stringIndexOf', function() {
     });
     it('should take an argument allowing the search to begin at any position', function() {
         expect(stringIndexOf(string, 'a', randomPosition)).toBe(string.indexOf('a', randomPosition));
+    });
+    it('should find the starting index of searchString of variable length', function() {
+        expect(stringIndexOf(string, searchString)).toBe(string.indexOf(searchString));
     });
 });
