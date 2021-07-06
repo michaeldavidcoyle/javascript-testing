@@ -82,10 +82,23 @@ describe('stringIndexOf', function() {
 });
 
 describe('stringLength', function() {
+    var strings = [
+        ' ',
+        'abc',
+        'qwerty',
+        'Hello, World!',
+        'I sure love being a string!',
+        'The quick brown fox jumps over a lazy dog.'
+    ];
+    var randomString = strings[Math.floor(Math.random() * strings.length)];
+
     it('should be a defined function', function() {
         expect(typeof stringLength).toBe('function');
     });
     it('should always return an integer', function() {
         expect(Number.isInteger(stringLength())).toBe(true);
+    });
+    it('should return the length of a passed string', function() {
+        expect(stringLength(randomString)).toBe(randomString.length);
     });
 });
