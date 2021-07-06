@@ -46,6 +46,7 @@ describe('stringCharAt', function() {
 describe('stringIndexOf', function() {
     var string = 'abcdefghijklmnopqrstuvwxyz';
     var randomChar = string[Math.floor(Math.random() * string.length)];
+    var randomPosition = Math.floor(Math.random() * 23);
 
     it('should be a defined function', function() {
         expect(typeof stringIndexOf).toBe('function');
@@ -61,7 +62,10 @@ describe('stringIndexOf', function() {
     it('should return the index of a passed single character', function() {
         expect(stringIndexOf(string, randomChar)).toBe(string.indexOf(randomChar));
     });
-    it('should return -1 when the searchString is not fount', function() {
+    it('should return -1 when the searchString is not found', function() {
         expect(stringIndexOf(string, '7')).toBe(-1);
+    });
+    it('should take an argument allowing the search to begin at any position', function() {
+        expect(stringIndexOf(string, 'a', randomPosition)).toBe(string.indexOf('a', randomPosition));
     });
 });
