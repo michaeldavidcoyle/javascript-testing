@@ -96,7 +96,7 @@ describe('stringLength', function() {
         expect(typeof stringLength).toBe('function');
     });
     it('should always return an integer', function() {
-        expect(Number.isInteger(stringLength())).toBe(true);
+        expect(Number.isInteger(stringLength(randomString))).toBe(true);
     });
     it('should return the length of a passed string', function() {
         expect(stringLength(randomString)).toBe(randomString.length);

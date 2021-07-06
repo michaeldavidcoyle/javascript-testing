@@ -38,6 +38,12 @@ function stringIndexOf(string, searchString, position=0) {
 * What if strings did not have a length property?
 * Create a function that returns the length of a passed string.
 */
-function stringLength() {
-    return 2;
+function stringLength(string) {
+    var index = 0;
+
+    while (string.charAt(index) !== '') {
+        index++;
+    }
+
+    return index;
 }
