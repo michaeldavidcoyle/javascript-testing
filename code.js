@@ -19,9 +19,10 @@ function stringCharAt(string, position) {
 // Create a function that reproduces the output of String.prototype.indexOf
 function stringIndexOf(string, searchString, position=0) {
     if (typeof string !== 'string') return -1;
+    if (typeof searchString !== 'string') return -1;
 
     for (var index = position; index < string.length; index++) {
-        if (string[index] === searchString) return index;
+        if (string.slice(index, index + searchString.length) === searchString) return index;
     }
 
     return -1;
