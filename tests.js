@@ -85,4 +85,7 @@ describe('stringLength', function() {
     it('should be a defined function', function() {
         expect(typeof stringLength).toBe('function');
     });
+    it('should always return an integer', function() {
+        expect(Number.isInteger(stringLength())).toBe(true);
+    });
 });
