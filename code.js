@@ -21,6 +21,12 @@ function stringIndexOf(string, searchString, position=0) {
     if (typeof string !== 'string') return -1;
     if (typeof searchString !== 'string') return -1;
 
+    if (searchString === '') {
+        if (position < 0) return 0;
+        if (position > string.length) return string.length;
+        return position;
+    }
+
     for (var index = position; index < string.length; index++) {
         if (string.slice(index, index + searchString.length) === searchString) return index;
     }
